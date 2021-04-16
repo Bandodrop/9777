@@ -1,0 +1,218 @@
+	.otysSelect{
+	    display: inline-block;
+	    vertical-align:top;
+	    max-width: 100%;
+	    width:100%;
+	    position: relative;
+	}
+	.otysSelect,.otysSelect *{
+		box-sizing:border-box;
+	}
+	.otysSelect{
+	  -webkit-touch-callout: none;
+	    -webkit-user-select: none;
+	     -khtml-user-select: none;
+	       -moz-user-select: none;
+	        -ms-user-select: none;
+	            user-select: none;
+	}
+	.otysSelect .navArrow{
+	    background-image: url(../fonts/down.svg);
+	    background-repeat: no-repeat;
+	    background-size: auto 20px;
+	    background-position: center center;
+	    width: 20px;
+	    height: 100%;
+	    position: absolute;
+	    right:7px;
+	    top: 0;
+	    transform:rotateZ(180deg);
+	    transition:0.2s;
+	}
+	.otysSelect .subOpen .navArrow{
+		transform:rotateZ(0deg);
+	}
+	.optionHolder > .option.selected{
+	    background-color:#2196F3;
+	    color:#fff;
+	}
+	.optionHolder {
+	    display: none;
+	}
+	.optionHolder{
+	    position: absolute;
+	    left: 0;
+	    width: 100%;
+	    top: 100%;
+	    border: 1px solid #cecece;
+	    border-top:0;
+	    max-height: 270px;
+	    overflow: auto;
+	    background: #fff;
+	    z-index: 1;
+	}
+	.otysSelectInner.filled .inputBox {
+	    height: auto;
+	    overflow: hidden;
+	    width: calc(100% - 30px);
+	}
+	.selectedItems {
+	    width:100%;
+	    white-space:nowrap;
+        color: #fff;
+	    text-overflow:ellipsis;
+	    overflow: hidden;
+	}
+
+	.flexible .selectedItems {
+	    width:100%;
+	    overflow:unset;
+	}
+	.otysSelectInner.count.filled > span.counter {
+	    position: absolute;
+	    right: -3px;
+	    top: -5px;
+	    background-color: #2296f3;
+	    color: #fff;
+	    padding: 3px;
+	    display: inline;
+	    width: 20px;
+	    height: 20px;
+	    font-size:11px;
+	    border-radius: 20px;
+	    line-height: 14px;
+	    text-align: center;
+	}
+	.otysSelectInner.count > span.counter{
+		display:none;
+	}
+	.otysSelect.single .otysSelectInner.count > span.counter{
+		display:none!important;
+	}
+	.otysSelectInner{
+	    box-shadow: inset 0 0 0px 1px #ebebeb;
+	    background: white;
+        position: relative;
+	}
+	.otysSelectInner.filled {
+	}
+	.otysSelectInner.flexible .inputBox {
+	    overflow:unset;
+	    width:auto;
+    	padding-right: 25px;
+	}
+	.otysSelectInner.filled .inputBox span.selectTitle {
+	    display: none;
+	}
+	.otysSelectInner .inputBox{
+	    cursor: pointer;
+	    padding: 3px 25px 3px 10px;
+	    min-height: 40px;
+	}
+
+	.closeMobView{
+		display:none;
+	}
+	.optionHolder > .option{
+	    padding:8px;
+	    cursor:pointer;
+	}
+	.optgroupLabel {
+	    padding: 3px 8px;
+	    font-weight: bold;
+	    font-size: 90%;
+	}
+	input.search {
+	    border-top: 0;
+	    border-left: 0;
+	    border-right: 0;
+	    border-bottom: 1px solid #cecece;
+	    background-image: url(../fonts/search.svg);
+	    background-repeat: no-repeat;
+	    background-position: calc(100% - 10px) center;
+	    background-size: 17px auto;
+	}
+	input.search.filled {
+	    background-image: url(../fonts/crossB.svg);
+	    background-size: 10px auto;
+	    cursor:pointer;
+	}
+	.inputBox .selectedItems >  div {
+	    display: inline;
+		white-space:nowrap;
+		text-overflow:clip;
+	    padding: 5px 20px 5px 5px;
+	    line-height:3.2rem;
+	    background-color: #2196F3;
+	    color: #fff;
+	    border-radius: 3px;
+	    margin: 5px 3px 5px 3px;
+	    background-image: url(../fonts/cross.svg);
+	    background-size: 10px 10px;
+	    background-repeat: no-repeat;
+	    background-position: calc(100% - 5px) center;
+	}
+	span.selectTitle {
+	    line-height:51px;
+	}
+	.otysSelect.single div.selectedItem {
+	    padding: 5px;
+	    background-image: none;
+	    background-color: transparent;
+	    color: #000;
+	}
+	.formInput.formSmallInput.apllDate > div > div.otysSelect{
+	    width:calc(100% / 3);
+	    float: left;
+	    padding: 0 5px;
+	}
+	.formInput.formSmallInput.apllDate > div > div.otysSelect:first-child{
+	    padding: 0 10px 0 0;
+	}
+	.formInput.formSmallInput.apllDate > div > div.otysSelect:last-child{
+		padding: 0 0 0 10px;
+	}
+	.otysSelectInner.flexible .selectedItems {
+    	white-space: normal;
+	    text-overflow: clip;
+	}
+	.otysSelectInner.flexible .inputBox .selectedItems > div{
+		display:inline-block;
+		line-height: normal;
+	}
+	input.search:focus {
+	    outline: none;
+	}
+	@media only screen and (min-width:768px) {
+    	.optionHolder > .option:hover{
+		    background-color:#a1d6ff;
+		}
+	}
+	@media only screen and (max-width:600px) {
+		.mobileView .optionHolder.open {
+		    position: fixed;
+		    top: 20px;
+		    left: 20px;
+		    right: 20px;
+		    width: calc(100% - 40px);
+		    max-height: calc(100% - 40px);
+		    height: auto;
+	        box-shadow: 0 0 15px 0px #969696;
+	        z-index:9999999;
+		}
+		.otysSelectInner.mobileView .closeMobView {
+		    display: block;
+		    width: 20px;
+		    height: 20px;
+		    position: fixed;
+		    top: 10px;
+		    right: 10px;
+		    background-color: black;
+		    z-index: 99999999;
+		    border-radius: 100%;
+		    text-align: center;
+		    background-image: url(../fonts/cross.svg);
+		    background-size:14px 14px;
+		    background-position:center center;
+		}
+	}
